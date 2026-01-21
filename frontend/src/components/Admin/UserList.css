@@ -1,0 +1,349 @@
+.user-list h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.users-table-container {
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.users-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.users-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.users-table th:last-child {
+  text-align: center;
+}
+
+.users-table td {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.users-table td:last-child {
+  text-align: center;
+}
+
+.users-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.users-table tbody tr:hover {
+  background: #f5f5f5;
+  transform: scale(1.01);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.user-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.role-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.role-badge-admin {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.role-badge-user {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.role-badge-manager {
+  background: #fff3e0;
+  color: #f57c00;
+}
+
+.role-badge-superadmin {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+}
+
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-user-btn,
+.edit-user-btn,
+.delete-user-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.view-user-btn i.fas.fa-eye,
+.view-user-btn .fas.fa-eye,
+.view-user-btn i,
+.view-user-btn .fa-eye,
+.view-user-btn i.fas.fa-eye,
+.view-user-btn .fas.fa-eye,
+.view-user-btn i,
+.view-user-btn .fa-eye {
+  color: #4caf50 !important;
+}
+
+.view-user-btn:hover {
+  background: #e8f5e9;
+  transform: scale(1.15);
+}
+
+.view-user-btn:hover i.fas.fa-eye,
+.view-user-btn:hover .fas.fa-eye,
+.view-user-btn:hover i,
+.view-user-btn:hover .fa-eye,
+.view-user-btn:hover i.fas.fa-eye,
+.view-user-btn:hover .fas.fa-eye,
+.view-user-btn:hover i,
+.view-user-btn:hover .fa-eye {
+  color: #2e7d32 !important;
+}
+
+/* Edit button - Blue - Very specific selectors */
+.edit-user-btn i.fas.fa-edit,
+.edit-user-btn .fas.fa-edit,
+.edit-user-btn i,
+.edit-user-btn .fa-edit,
+.edit-user-btn i.fas.fa-edit,
+.edit-user-btn .fas.fa-edit,
+.edit-user-btn i,
+.edit-user-btn .fa-edit {
+  color: #2196f3 !important;
+}
+
+.edit-user-btn:hover {
+  background: #e3f2fd;
+  transform: scale(1.15);
+}
+
+.edit-user-btn:hover i.fas.fa-edit,
+.edit-user-btn:hover .fas.fa-edit,
+.edit-user-btn:hover i,
+.edit-user-btn:hover .fa-edit,
+.edit-user-btn:hover i.fas.fa-edit,
+.edit-user-btn:hover .fas.fa-edit,
+.edit-user-btn:hover i,
+.edit-user-btn:hover .fa-edit {
+  color: #1565c0 !important;
+}
+
+/* Delete button - Red - Very specific selectors */
+.delete-user-btn i.fas.fa-trash,
+.delete-user-btn .fas.fa-trash,
+.delete-user-btn i,
+.delete-user-btn .fa-trash,
+.delete-user-btn i.fas.fa-trash,
+.delete-user-btn .fas.fa-trash,
+.delete-user-btn i,
+.delete-user-btn .fa-trash {
+  color: #f44336 !important;
+}
+
+.delete-user-btn:hover {
+  background: #ffebee;
+  transform: scale(1.15);
+}
+
+.delete-user-btn:hover i.fas.fa-trash,
+.delete-user-btn:hover .fas.fa-trash,
+.delete-user-btn:hover i,
+.delete-user-btn:hover .fa-trash,
+.delete-user-btn:hover i.fas.fa-trash,
+.delete-user-btn:hover .fas.fa-trash,
+.delete-user-btn:hover i,
+.delete-user-btn:hover .fa-trash {
+  color: #c62828 !important;
+}
+
+.view-user-btn:active,
+.edit-user-btn:active,
+.delete-user-btn:active {
+  transform: scale(0.95);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Pagination */
+.users-table-container .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+  background: white;
+  border-top: 1px solid #f0f0f0;
+  margin: 0;
+}
+
+.pagination-nav-btn {
+  padding: 0;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-nav-btn i {
+  font-size: 0.9rem;
+}
+
+.pagination-nav-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.pagination-nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-indicators {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.pagination-indicator {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  color: #333;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-indicator:hover {
+  border-color: #667eea;
+  color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.pagination-indicator.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 3px 8px rgba(102, 126, 234, 0.3);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    gap: 10px;
+    padding: 15px 10px;
+  }
+
+  .pagination-indicators {
+    gap: 5px;
+  }
+
+  .pagination-indicator {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .pagination-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .pagination-indicators {
+    order: -1;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}

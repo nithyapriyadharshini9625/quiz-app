@@ -1,0 +1,97 @@
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-element {
+  position: absolute;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  color: rgba(255, 255, 255, 0.12);
+  font-weight: bold;
+  animation: floatAround 20s ease-in-out infinite;
+  user-select: none;
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.1),
+    0 0 20px rgba(255, 255, 255, 0.05);
+  font-family: 'Arial', sans-serif;
+  will-change: transform;
+}
+
+@keyframes floatAround {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 0.08;
+  }
+  20% {
+    transform: translate(150px, -120px) rotate(72deg) scale(1.3);
+    opacity: 0.15;
+  }
+  40% {
+    transform: translate(-100px, 150px) rotate(144deg) scale(0.9);
+    opacity: 0.12;
+  }
+  60% {
+    transform: translate(180px, 100px) rotate(216deg) scale(1.2);
+    opacity: 0.18;
+  }
+  80% {
+    transform: translate(-120px, -80px) rotate(288deg) scale(0.95);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg) scale(1);
+    opacity: 0.08;
+  }
+}
+
+/* Different sizes for variety */
+.floating-element:nth-child(3n) {
+  font-size: clamp(1.8rem, 3vw, 4rem);
+  opacity: 0.1;
+}
+
+.floating-element:nth-child(5n) {
+  font-size: clamp(3rem, 6vw, 7rem);
+  opacity: 0.15;
+}
+
+/* Special styling for question marks */
+.floating-element.question-mark {
+  color: rgba(255, 255, 255, 0.18);
+  font-size: clamp(3rem, 6vw, 8rem);
+  font-weight: 900;
+}
+
+/* Special styling for operators */
+.floating-element.operator {
+  color: rgba(255, 255, 255, 0.14);
+  font-size: clamp(2.8rem, 5.5vw, 6.5rem);
+}
+
+/* Additional variety for different element types */
+.floating-element:nth-child(odd) {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-element:nth-child(even) {
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Smooth transitions */
+.floating-element {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Prevent elements from going off screen */
+@media (max-width: 768px) {
+  .floating-element {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+  }
+}
+

@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background: #0a1929;
+}
+
+/* Glassy Blue Background with Effects */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(33, 150, 243, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(63, 81, 181, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(25, 118, 210, 0.3) 0%, #0a1929 100%),
+    linear-gradient(135deg, #1a237e 0%, #0d47a1 50%, #0277bd 100%);
+  background-size: 100% 100%;
+  animation: backgroundPulse 10s ease-in-out infinite;
+  z-index: -2;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, rgba(13, 71, 161, 0.85) 0%, rgba(25, 118, 210, 0.9) 100%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.05) 2px,
+      rgba(255, 255, 255, 0.05) 4px
+    );
+  backdrop-filter: blur(1px);
+  z-index: -1;
+  opacity: 0.7;
+}
+
+@keyframes backgroundPulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global Icon Colors - Ensure all Font Awesome icons have colors */
+.fas, .far, .fab {
+  color: inherit;
+}
+
+/* Default icon colors when not specified - but exclude action buttons */
+i.fas:not([class*="color"]):not([style*="color"]):not(.view-user-btn .fas):not(.edit-user-btn .fas):not(.delete-user-btn .fas) {
+  color: #667eea;
+}
+
+/* Specific icon colors by type - but allow action buttons to override */
+.fa-user:not(.view-user-btn .fas):not(.edit-user-btn .fas):not(.delete-user-btn .fas) {
+  color: #667eea !important;
+}
+
+.fa-book, .fa-book-open {
+  color: #764ba2 !important;
+}
+
+.fa-file-alt, .fa-list {
+  color: #667eea !important;
+}
+
+.fa-users {
+  color: #f093fb !important;
+}
+
+.fa-plus {
+  color: #667eea !important;
+}
+
+/* Action button icons - specific colors */
+.view-user-btn .fa-eye,
+.view-user-btn .fas.fa-eye {
+  color: #4caf50 !important;
+}
+
+.edit-user-btn .fa-edit,
+.edit-user-btn .fas.fa-edit {
+  color: #2196f3 !important;
+}
+
+.delete-user-btn .fa-trash,
+.delete-user-btn .fas.fa-trash {
+  color: #f44336 !important;
+}
+
+/* General icon colors (for non-action buttons) */
+.fa-eye:not(.view-user-btn .fa-eye):not(.edit-user-btn .fa-eye):not(.delete-user-btn .fa-eye) {
+  color: #4caf50 !important;
+}
+
+.fa-edit:not(.view-user-btn .fa-edit):not(.edit-user-btn .fa-edit):not(.delete-user-btn .fa-edit),
+.fa-pencil-alt:not(.view-user-btn .fa-pencil-alt):not(.edit-user-btn .fa-pencil-alt):not(.delete-user-btn .fa-pencil-alt) {
+  color: #2196f3 !important;
+}
+
+.fa-trash:not(.view-user-btn .fa-trash):not(.edit-user-btn .fa-trash):not(.delete-user-btn .fa-trash),
+.fa-trash-alt:not(.view-user-btn .fa-trash-alt):not(.edit-user-btn .fa-trash-alt):not(.delete-user-btn .fa-trash-alt) {
+  color: #f44336 !important;
+}
+
+.fa-bullseye {
+  color: #667eea !important;
+}
+
+.fa-chart-bar {
+  color: #f093fb !important;
+}
+
